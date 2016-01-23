@@ -5,6 +5,10 @@ Copyleft (L) 2016
 
 class Board:
     global board, treasures
+    '''board[i][j] is a zero-indexed, 2d list where if at row i and column j there is a treasure,
+    board[i][j] = 'T', if there isn't, board[i][j] represents the number of adjacent treasures where
+    an adjacent grid position row i1 and column j1 have |i-i1| <= 1 and |j-j1| <= 1 and i != i1
+    and j != j1'''
     board = [[0 for i in range(4)] for j in range(4)]
     treasures = set()
     def __init__(self):
